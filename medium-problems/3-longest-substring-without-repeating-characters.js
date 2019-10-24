@@ -30,79 +30,30 @@ Explanation: The answer is "wke", with the length of 3.
 
  */
 
-/**
+/**This function is too slow and was not accepted.
  * @param {string} s
  * @return {number}
  */
 var lengthOfLongestSubstring = function(s) {
-    let letterArr = new Array(26).fill(0);
-    let subStringLength = 0;
-    let highScore = 0;
-
-    [...s].forEach(letter => {
-        if (isNewLetter(letter, letterArr)) {
-            subStringLength++;
-            addLetterToArray(letter, letterArr);
-        } else {
-            highScore = subStringLength;
-            subStringLength = 0;
-            letterArr = resetArr();
+    let highScore = 0
+    for (let i = 0; i < s.length; i++) {
+        for (let j = i + 1; j <= s.length; j++) {
+            if (allUnique(s, i, j)) {
+                highScore = (highScore > (j - i)) ? highScore : (j - i);
+            }
         }
-    });
-    return (highScore <= subStringLength) ? subStringLength : highScore;
+    }
+    return highScore;
 };
-
-const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-const string = "abcdefghijklmnopqrstuvwxyz";
-
-function resetArr(arr) {
-    arr = new Array(26).fill(0);
-    return arr;
-}
-
-function isNewLetter(letter, arr) {
-    let index = alphabet.indexOf(letter);
-    return (arr[index] === 0) ? true : false;
-}
-
-function addLetterToArray(letter, array) {
-    let index = alphabet.indexOf(letter);
-    array[index]++;
-}
-
-/**
- * @param {string} s
- * @return {number}
- */
-var lengthOfLongestSubstring = function(s) {
-    let letterArr = getLetterCount(s);
-    console.log(letterArr);
-    return countNumberOfChars(letterArr);
-};
-
-const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-
-function getLetterCount(s) {
-    let letterArr = new Array(26).fill(0);
-    [...s].forEach(letter => {
-        let index = alphabet.indexOf(letter);
-        letterArr[index]++;
-    });
-    return letterArr;
-}
-
-function printLetters(s) {
-    [...s].forEach(letter => {
-        console.log(letter);
-    });
-}
-
-function countNumberOfChars(arr) {
-    let count = 0;
-    arr.forEach(letterCount => {
-        if (letterCount > 0) {
-            count++;
+    
+function allUnique(s, start, end) {
+    let charSet = [];
+    for (let i = start; i < end; i++) {
+        let char = s.charAt(i);
+        if (charSet.includes(char)) {
+            return false;
         }
-    });
-    return count;
+        charSet.push(char)
+    }
+    return true;
 }
