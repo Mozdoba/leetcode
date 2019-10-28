@@ -48,3 +48,38 @@ Submissions
 959,393 
 */
 
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var romanToInt = function(s) {
+    let sum = 0;
+    for (let i = 0; i < s.length; i++) {
+        if (i === s.length - 1) {
+            sum += romanMap.get(s[i]);
+        } else if (romanMap2.has(s.substring(i, i+2))) {
+            sum += romanMap2.get(s.substring(i, i+2));
+            i++;
+        } else {
+            sum += romanMap.get(s[i]);
+        }
+    }
+    return sum;
+};
+
+const romanMap = new Map();
+romanMap.set("I", 1);
+romanMap.set("V", 5);
+romanMap.set("X", 10);
+romanMap.set("L", 50);
+romanMap.set("C", 100);
+romanMap.set("D", 500);
+romanMap.set("M", 1000);
+
+const romanMap2 = new Map();
+romanMap2.set("IV", 4);
+romanMap2.set("IX", 9);
+romanMap2.set("XL", 40);
+romanMap2.set("XC", 90);
+romanMap2.set("CD", 400);
+romanMap2.set("CM", 900);
