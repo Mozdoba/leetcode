@@ -41,7 +41,7 @@ Follow-up: Can you come up with an algorithm that is less than O(n2) time comple
  * @param {number} target
  * @return {number[]}
  */
- var twoSum = function(nums, target) {
+ var twoSumA = function(nums, target) {
   const map = new Map;
   for (let i = 0; i < nums.length; i++) {
       let complement = target - nums[i];
@@ -49,5 +49,21 @@ Follow-up: Can you come up with an algorithm that is less than O(n2) time comple
           return [map.get(complement), i];
       }
       map.set(nums[i], i);
+  }
+};
+
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
+ var twoSumB = function(nums, target) {
+  const dict = {};
+  for (let i = 0; i < nums.length; i++) {
+      const complement = target - nums[i];
+      if (dict[complement] != undefined) {
+          return [dict[complement], i];
+      }
+      dict[nums[i]] = i;
   }
 };
