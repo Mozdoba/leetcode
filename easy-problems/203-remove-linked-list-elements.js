@@ -32,12 +32,6 @@ The number of nodes in the list is in the range [0, 104].
 }
 
 /**
- * @param {ListNode} headA
- * @param {ListNode} headB
- * @return {ListNode}
- */
-
-/**
  * @param {ListNode} head
  * @param {number} val
  * @return {ListNode}
