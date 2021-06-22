@@ -2,14 +2,12 @@
  * 136. Single Number
 Easy
 
-COMPLETED —— 2021-06-19 —— ???
+FAILED —— 2021-06-21 —— 26m 26s
 Tag - Hash Table
 
 Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.
 
 You must implement a solution with a linear runtime complexity and use only constant extra space.
-
-
 
 Example 1:
 
@@ -32,17 +30,34 @@ Constraints:
 Each element in the array appears twice except for one element which appears only once.
  */
 
-/**
- * @param {number} n
- * @return {boolean}
- */
- var isHappy = function(n) {
+const numberOfSquares = (n) => {
+  let numberOfSquares = 0;
+  while (n > 0) {
+      let num = n % 10;
+      n = Math.floor(n / 10);
+      numberOfSquares += Math.pow(num, 2);
+  }
+  return numberOfSquares;
+}
 
+/**
+* @param {number} n
+* @return {boolean}
+*/
+var isHappy = function(n) {
+  if (n === 1) return true;
+  const map = new Map();
+  do {
+    n = numberOfSquares(n);
+    if (n === 1) return true;
+    if (map.has(n)) return false;
+    map.set(n,n);
+  } while(true);
 };
 
+
 const testA = () => {
-  let arr = [4,1,2,1,2];
-  singleNumber(arr);
+  isHappy(2);
 }
 
 testA();
