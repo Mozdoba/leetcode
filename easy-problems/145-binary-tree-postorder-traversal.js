@@ -63,16 +63,25 @@ Follow up: Recursive solution is trivial, could you do it iteratively?
  * @return {number[]}
  */
  var postorderTraversal = function(root) {
-
+    return postOrderTraversalIterative(root);
 };
 
-const postOrderTraversal = (root, stack) => {
-    if (root) {
-        stack.push(root.val);
-        preOrderTraversal(root.left, stack);
-        preOrderTraversal(root.right, stack);
+var postOrderTraversalIterative = function(root) {
+    let values = [];
+    let stack = [];
+    if (!root) return values;
+    stack.push(root);
+
+    while (stack.length != 0) {
+        let curr = stack.pop();
+
+        curr.left && stack.push(curr.left);
+        curr.right && stack.push(curr.right);
+        values.push(curr.val);
     }
-}
+    return values.reverse();
+};
+
 const testA = () => {
     let rootP = new TreeNode(1);
     let a = new TreeNode(2);
