@@ -39,17 +39,17 @@ function ListNode(val, next) {
  */
  var deleteDuplicates = function(head) {
   if (!head) return head;
-  const memory = new Map();
-  memory.set(head.val);
+  const map = new Map();
+  map.set(head.val);
   let current = head.next;
   let prev = head;
 
   while (current) {
-      if (memory.has(current.val)) {
+      if (map.has(current.val)) {
           prev.next = current.next;
           current = current.next;
       } else {
-          memory.set(current.val);
+          map.set(current.val);
           prev = current;
           current = current.next;
       }
