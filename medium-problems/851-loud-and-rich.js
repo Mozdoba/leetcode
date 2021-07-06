@@ -1,4 +1,10 @@
 /**
+Medium
+
+FAILED —— 2021-07-05 —— 2h 45m
+Tag - Topological Sort
+
+ *
  * In a group of N people (labelled 0, 1, 2, ..., N-1), each person has different amounts of money, and different levels of quietness.
 
 For convenience, we'll call the person with label x, simply "person x".
