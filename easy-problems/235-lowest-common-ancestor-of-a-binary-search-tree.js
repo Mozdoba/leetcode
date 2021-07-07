@@ -60,6 +60,38 @@ function TreeNode(val, left, right) {
  * @return {TreeNode}
  */
  var lowestCommonAncestor = function(root, p, q) {
+  if (!root) return null;
+  let pathP = dfsFindTarget(root, p);
+  let pathQ = dfsFindTarget(root, q);
+  let shorterPath = pathP.length < pathQ.length ? pathP : pathQ;
+  let lca = root;
+  for (let i = 1; i < shorterPath.length; i++) {
+    if (pathP[i] !== pathQ[i]) return lca;
+    else lca = pathP[i];
+  }
+  return lca;
+};
+
+const dfsFindTarget = (root, target, path = []) => {
+  if (!root) return path;
+  const stack = [root];
+  while (stack.length) {
+    let curr = stack.pop();
+    path.push(curr);
+    if (curr === target) return path;
+    if (curr.left && target.val < curr.val) stack.push(curr.left);
+    if (curr.right && target.val >= curr.val) stack.push(curr.right);
+  }
+  return path;
+}
+
+/**
+ * @param {TreeNode} root
+ * @param {TreeNode} p
+ * @param {TreeNode} q
+ * @return {TreeNode}
+ */
+ var lowestCommonAncestor1 = function(root, p, q) {
   let pathP = dfs(root, p);
   let pathQ = dfs(root, q);
   let shorterPath = pathP.length < pathQ.length ? pathP : pathQ;
@@ -71,7 +103,7 @@ function TreeNode(val, left, right) {
   return lca;
 };
 
-const dfs = (root, node) => {
+const dfs1 = (root, node) => {
   let path = [];
   if (!root) return path;
   let stack = [];
@@ -135,5 +167,5 @@ const testA = () => {
     console.log(lowestCommonAncestor(root, a, d));
   }
 
-//   testA();
-  testB();
+// testA();
+// testB();
