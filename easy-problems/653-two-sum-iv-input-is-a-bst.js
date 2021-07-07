@@ -2,7 +2,7 @@
  * 653. Two Sum IV - Input is a BST
 Easy
 
-COMPLETED —— 2021-07-07 —— 48m 27s
+COMPLETED —— 2021-07-07 —— 15m 03s
 Tag - Binary Search Tree
 
 Given the root of a Binary Search Tree and a target number k, return true if there exist two elements in the BST such that their sum is equal to the given target.
