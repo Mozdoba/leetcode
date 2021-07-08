@@ -42,6 +42,22 @@ The number of nodes in the given list will be between 1 and 100.
 }
 
 /**
+ *
+ * 2nd Try Implementation
+ * @param {ListNode} head
+ * @return {number}
+ */
+ var getDecimalValue = function(head) {
+  let num = [];
+  let curr = head;
+  while (curr) {
+      num.push(curr.val);
+      curr = curr.next;
+  }
+  return parseInt(num.join(""), 2);
+};
+
+/**
  * @param {ListNode} head
  * @return {number}
  */

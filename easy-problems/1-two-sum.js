@@ -36,7 +36,28 @@ Only one valid answer exists.
 Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?
  */
 
+
 /**
+ * 2nd Implementation
+ * COMPLETED - 4m 37s - 2020-07-07
+ *
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
+var twoSum = function(nums, target) {
+    for (let i = 0; i < nums.length; i++) {
+        let complement = target - nums[i];
+        if (nums.includes(complement) && nums.indexOf(complement) != i) return [i, nums.indexOf(complement)];
+    }
+};
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/**
+ * FAILED - 10m 53s - 2021-06-17
  * @param {number[]} nums
  * @param {number} target
  * @return {number[]}

@@ -1,0 +1,62 @@
+Date;Seconds;Comment
+
+2021-07-07, 7:02 PM;277;
+2021-07-07, 6:49 PM;959;873-minimum-distance-between-BST-nodes –– EASY –– COMPLETED –– binary search tree
+2021-07-07, 2:56 PM;0;1584-min-cost-to-connect-all-points –– MEDIUM –– FAILED –– kruskal's - minimum spanning tree
+2021-07-07, 1:22 PM;171;700-search-in-a-binary-search-tree –– EASY –– COMPLETED –– binary search tree
+2021-07-07, 1:07 PM;903;653-two-sum-iv-input-is-a-bst –– EASY –– COMPLETED –– binary search tree
+2021-07-07, 12:40 PM;2907;530-minimum-absolute-difference-in-BST –– EASY –– COMPLETED –– binary search tree
+2021-07-07, 11:05 AM;1858;501-find-mode-in-binary-search-tree –– EASY –– COMPLETED –– binary search tree
+2021-07-06, 3:29 PM;0;109-converted-sorted-list-to-binary-search-tree –– MEDIUM –– FAILED –– binary search tree & list runner technique
+2021-07-06, 2:47 PM;1243;108-convert-sorted-array-to-binary-search-tree –– EASY –– FAILED –– binary search tree
+2021-07-06, 10:38 AM;11893;1786-number-of-restricted-paths-from-first-to-last-node –– MEDIUM –– FAILED –– dijkstra's
+2021-07-05, 5:35 PM;4658;1462-course-schedule-iv –– MEDIUM –– FAILED
+2021-07-05, 12:22 PM;9922;851-loud-and-rich –– MEDIUM –– FAILED
+2021-07-04, 9:59 PM;6618;802-find-eventual-safe-states –– MEDIUM –– FAILED
+2021-07-02, 3:03 PM;8809;310-minimum-height-tree –– MEDIUM –– FAILED
+2021-07-02, 12:21 PM;7;210-course-schedule-ii –– MEDIUM –– FAILED
+2021-06-30, 2:00 PM;2980;207-course-schedule –– MEDIUM ––  FAILED
+2021-06-25, 12:11 PM;2428;67-add-binary –– FAILED
+2021-06-25, 11:25 AM;523;58-length-of-last-word –– COMPLETED
+2021-06-25, 11:03 AM;2580;28-implement-strstr –– FAILED
+2021-06-25, 9:29 AM;0;88-merge-sorted-array –– FAILED
+2021-06-24, 9:39 AM;1708;20-valid-parenthesis –– COMPLETED
+2021-06-24, 7:58 AM;460;257-binary-tree-paths –– COMPLETED
+2021-06-23, 9:29 PM;1433;236-lowest-common-ancestor-of-a-binary-tree –– COMPLETED
+2021-06-23, 9:02 PM;4489;235-lowest-common-ancestor-of-a-binary-search-tree –– COMPLETED
+2021-06-23, 2:59 PM;219;226-invert-binary-tree - COMPLETED
+2021-06-23, 2:41 PM;125;145-binary-tree-post-order-traversal –– COMPLETED
+2021-06-23, 2:34 PM;1121;144-binary-tree-pre-order-traversal –– COMPLETED
+2021-06-23, 1:43 PM;1347;113-path-sum-ii –– COMPLETED
+2021-06-23, 12:55 PM;3117;112-path-sum –– COMPLETED
+2021-06-23, 11:34 AM;381;111-minimum-depth-of-binary-tree –– COMPLETED
+2021-06-23, 11:03 AM;2545;110-balanced-binary-tree –– COMPLETED
+2021-06-23, 10:06 AM;0;104-maximum-depth-of-binary-tree –– COMPLETED
+2021-06-22, 10:05 PM;1103;101-symmetric-tree –– FAILED
+2021-06-22, 2:33 PM;3632;100-same-tree –– COMPLETED
+2021-06-22, 1:20 PM;1647;645-set-mismatch –– FAILED
+2021-06-22, 11:24 AM;5900;599-minimum-index-sum-of-two-lists –– COMPLETED
+2021-06-22, 9:17 AM;2576;594-longest-harmonious-subsequence –– FAILED
+2021-06-22, 8:30 AM;431;575-distribute-candies –– COMPLETED
+2021-06-21, 10:13 PM;1283;500-keyboard-row –– COMPELTED
+2021-06-21, 9:49 PM;648;463-island-perimeter –– FAILED
+2021-06-21, 3:53 PM;2060;409-longest-palindrome –– FAILED
+2021-06-21, 3:15 PM;1242;389-find-the-difference –– COMPLETED
+2021-06-21, 2:52 PM;1299;387-first-unique-character-in-a-string –– COMPLETED
+2021-06-21, 2:18 PM;1656;350-intersection-of-two-arrays-II –– FAILED
+2021-06-21, 1:27 PM;1718;349-intersection-of-two-arrays –– COMPLETED
+2021-06-21, 12:47 PM;850;242-valid-anagram –– COMPLETED
+2021-06-21, 12:09 PM;3928;290-word-pattern –– FAILED
+2021-06-21, 10:31 AM;827;136-contains-duplicate –– COMPLETED
+2021-06-21, 10:02 AM;3109;205-isomorphic-strings –– FAILED
+2021-06-21, 9:05 AM;2239;204-count-primes –– FAILED
+2021-06-21, 7:50 AM;1586;136-single-number –– FAILED
+2021-06-19, 9:08 PM;224;94-binary-tree-inorder-traversal –– COMPLETED
+2021-06-19, 7:43 PM;801;1290-convert-binary-number-in-a-linked-list-to-integer –– COMPLETED
+2021-06-19, 6:19 PM;333;876-middle-of-the-linked-list –– COMPLETED
+2021-06-19, 3:27 PM;1524;234-palindrome-linked-list –– FAILED
+2021-06-19, 2:40 PM;949;206-reverse-linked-list –– FAILED
+2021-06-19, 2:02 PM;1471;203-remove-linked-list-elements –– COMPLETED
+2021-06-19, 1:19 PM;859;160-intersection-of-two-linked-lists –– COMPLETED
+2021-06-19, 12:29 PM;1503;83-remove-duplicated-from-sorted-list –– COMPLETED
+2021-06-17, 11:35 AM;653;1-two-sum –– FAILED

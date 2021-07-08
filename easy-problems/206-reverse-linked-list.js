@@ -1,7 +1,9 @@
 /**
 206. Reverse Linked List
 Easy
-FAILED —— 2021-06-19 —— 15m 49s
+1st try - FAILED —— 2021-06-19 —— 15m 49s
+2nd try - COMPLETED –– 2021-07-07 –– 2m 54s
+
 Tag - Linked List
 Given the head of a singly linked list, reverse the list, and return the reversed list.
 
@@ -34,6 +36,35 @@ Follow up: A linked list can be reversed either iteratively or recursively. Coul
   this.val = (val===undefined ? 0 : val)
   this.next = (next===undefined ? null : next)
 }
+
+/**
+ * 2nd Try Implementation
+ * 2min 54s - 2021-07-07
+ * @param {*} head
+ * @returns
+ */
+var reverseList = function(head) {
+  let prev = null;
+  let curr = head;
+  let temp = head.next;
+
+  while (curr) {
+    curr.next = prev;
+    prev = curr;
+    curr = temp;
+    if (temp) temp = temp.next;
+  }
+
+  return prev;
+};
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
 
 /**
  * @param {ListNode} head

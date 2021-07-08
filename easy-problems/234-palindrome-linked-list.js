@@ -1,10 +1,12 @@
 /**
  * 234. Palindrome Linked List
 Easy
-Tag - Linked List
-FAILED —— 2021-06-19 —— 25m 24s
-Given the head of a singly linked list, return true if it is a palindrome.
 
+Tag - Linked List
+1st try - FAILED —— 2021-06-19 —— 25m 24s
+2nd try - COMPLETED –– 2021-07-07 –– 6m 15s
+
+Given the head of a singly linked list, return true if it is a palindrome.
 
 Example 1:
 
@@ -34,6 +36,42 @@ Follow up: Could you do it in O(n) time and O(1) space?
   this.val = (val===undefined ? 0 : val)
   this.next = (next===undefined ? null : next)
 }
+
+/**
+ *
+ * Time Complexity - O(n)
+ * Space Complexity - O(1)
+ *
+ * @param {ListNode} head
+ * @return {boolean}
+ */
+ var isPalindrome = function(head) {
+    let length = 0;
+    let curr = head;
+    let prev = null;
+    // make linked list doubly linked
+    while (curr) {
+      curr.prev = prev;
+      prev = curr;
+      curr = curr.next;
+      length++;
+    }
+    let mid = Math.floor(length / 2);
+    let tail = prev;
+
+    // compare vals from front & back
+    while (mid) {
+      if (head.val !== tail.val) return false;
+      head = head.next;
+      tail = tail.prev;
+      mid--;
+    }
+    return true;
+ }
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /**
  * @param {ListNode} head
