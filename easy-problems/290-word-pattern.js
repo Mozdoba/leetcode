@@ -49,6 +49,23 @@ Submissions
  * @return {boolean}
  */
  var wordPattern = function(pattern, s) {
+  let words = s.split(" ");
+  if (words.length != pattern.length) return false;
+  let patternToWords = new Map();
+  let WordsToPattern = new Map();
+
+  for (let i = 0; i < pattern.length; i++) {
+    if (!patternToWords.has(pattern.charAt(i)) && !WordsToPattern.has(words[i])) {
+      patternToWords.set(pattern.charAt(i), words[i]);
+      WordsToPattern.set(words[i], pattern.charAt(i));
+    }
+    if (patternToWords.get(pattern.charAt(i)) != words[i] && WordsToPattern.get(words[i]) != pattern.charAt(i)) return false;
+  }
+
+  return true;
+};
+
+ var wordPattern = function(pattern, s) {
   const words = s.split(" ");
   const map = new Map();
 

@@ -33,6 +33,33 @@ Constraints:
 s consists of lowercase and/or uppercase English letters only.
  */
 
+/**
+ *
+ * Time Complexity - O(N) - N -> length of s, we need to count each letter
+ * Space Complexity - O(1) - Size of Map is fixed bc/ num of Alphabetic Characters is fixed.
+ * @param {string} s
+ * @return {number}
+ */
+ var longestPalindrome = function(s) {
+    if (s.length === 1) return 1;
+    let map = new Map();
+    for (let letter of s) {
+        if (map.has(letter)) map.set(letter, map.get(letter) + 1);
+        else map.set(letter, 1);
+    }
+    let palindromeLength = 0;
+    Array.from(map.entries()).forEach(([letter, count]) => {
+        palindromeLength += Math.floor(count / 2) * 2; //floor of division & multiply to add number of pairs;
+
+        if (palindromeLength % 2 == 0 && count % 2 !== 0) palindromeLength++; // grab the left over single char to be used as a center if palindrome length is even
+    });
+    return palindromeLength;
+};
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /**
  * @param {string} s

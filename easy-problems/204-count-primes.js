@@ -26,20 +26,19 @@ Constraints:
 0 <= n <= 5 * 106
  */
 
+
 /**
  * @param {number} n
  * @return {number}
  */
  var countPrimes = function(n) {
-  let primes = Array(n+1);
-  primes.fill(true);
-  primes[0] = false; // 0 is not a prime number
-  primes[1] = false; // 1 is not a prime number
-  for (let i = 2; i*i <= n; i++) { // only need to iterate up to i*i
+  const primes = Array(n).fill(true);
+  primes[0] = false;
+  primes[1] = false;
+  for (let i = 2; i < n; i++) {
     if (primes[i]) {
-      // set all multiples of i to false, starting from i * i
-      for (let p = i*i; p <= n; p += i) {
-        primes[p] = false;
+      for (j = i+i; j < n; j += i) {
+        primes[j] = false;
       }
     }
   }

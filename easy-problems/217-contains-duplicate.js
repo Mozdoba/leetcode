@@ -46,4 +46,17 @@ Submissions
   return false;
 };
 
-containsDuplicate([1,2,3,1]);
+var containsDuplicate = function(nums) {
+  let count = 0;
+  let N = nums.length
+  while (nums.length && count < N) {
+      let num = nums[0];
+      nums.splice(0, 1);
+      if (nums.includes(num)) return true;
+      count++;
+  }
+  return false;
+};
+
+containsDuplicate([2,14,18,22,22]);
+
